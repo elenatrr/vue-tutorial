@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Tutorial #6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+
+        <h1>{{ greeting('morning') }}</h1>
+        <a :href="website" @click.prevent="click">Google {{ event }}</a>
+        <p v-html="websiteTag"></p>
+        <p>Job: {{ job }}</p>
+        <input type="text" :value="name">     
+        
+        <p>I'm {{ age }} y.o.</p>
+        <button @click.once="addYear(1)">Add a Year</button>
+        <button @click="subtractYear(1)">Subtract a Year</button>
+        <button @dblclick="addYear(10)">Add 10 Years</button>
+        <button @dblclick="subtractYear(10)">Subtract 10 Years</button>
+
+        <div @mousemove="updateXY" class="canvas">
+            <span>{{x}}, {{y}}</span>
+        </div>
+
+    </div>
+  
+
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
