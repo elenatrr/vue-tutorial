@@ -1,0 +1,24 @@
+span{
+  padding: 20px;
+  background-color: darkseagreen;
+  color: beige;
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+.red span{
+  padding: 20px;
+  background-color: tomato;
+  color: beige;
+  display: inline-block;
+}
+
+.add span::after {
+  content: 'See you';
+  margin-left: 10px;
+}
+
+button {
+  margin-top: 20px;
+}

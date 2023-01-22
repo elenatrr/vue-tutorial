@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Tutorial #12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+
+        <h2>Dynamic CSS</h2>
+        <h3>Example 1</h3>
+        <div @click="red = !red" :class="{red: red}">
+            <span>Hello</span>
+        </div>
+        <h3>Example 2</h3>
+        <div :class="computedClass">
+            <span>Bye-bye</span>
+        </div>
+        <button @click="red = !red">Toggle color</button>
+        <button @click="add = !add">Toggle additional text</button>
+
+        <h2>Conditionals</h2>
+        <button @click="greeting = !greeting">Toggle greeting</button>
+        <button @click="error = !error">Toggle Error</button>
+        <button @click="success = !success">Toggle Success</button>
+        <p v-show="greeting">Hi there!</p>
+        <p v-if="error">There has been an error...</p>
+        <p v-else-if="success">Whoooo, success :)</p>
+
+        <h2>Looping with v-for</h2>
+        <ul>
+            <li v-for="character in characters">{{ character }}</li>
+        </ul>
+        <ul>
+            <li v-for="ninja in ninjas">{{ ninja.name }}: {{ ninja.age }}</li>
+        </ul>
+        <template v-for="(ninja, index) in ninjas">
+            <h4>[{{ index }}] {{ ninja.name }}</h4>
+            <p>Age: {{ ninja.age }}</p>
+        </template>
+        <template v-for="ninja in ninjas">
+            <div v-for="(val, key) in ninja">
+                <p>{{ key }}: {{ val }}</p>
+            </div>
+        </template>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
