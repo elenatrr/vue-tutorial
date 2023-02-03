@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Tutorial #16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Multiple Vue Instances & Intro to Components & Refs</h1>
+    <div id="app-one">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <greeting></greeting>
+    </div>
+
+    <div id="app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <button @click="changeTitle">Change Title</button>
+      <greeting></greeting>
+      <h2>Refs</h2>
+      <input type="text" ref="input">
+      <p>Your fav food: {{ output }}</p>
+      <button @click="readRef">Submit</button>
+      <div style="margin-top: 16px;" ref="test">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
